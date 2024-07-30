@@ -6,6 +6,7 @@ import SectionThree from "../components/SectionThree";
 import SectionFour from "../components/SectionFour";
 import SectionFive from "../components/SectionFive";
 import SectionSix from "../components/SectionSix";
+
 const Test = () => {
     return (
       <div>
@@ -18,6 +19,7 @@ const Test = () => {
         <SectionFive />
         <SectionSix />
         {/* Add other sections here */}
+        
       </div>
     );
   };

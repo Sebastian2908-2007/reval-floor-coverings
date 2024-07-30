@@ -1,4 +1,5 @@
 // components/BathroomMakeover.js
+import ScrollOpacity from "./ScrollOpacity";
 const SectionOne = () => {
     return (
       <section className="bg-white text-gray-800 py-16">
@@ -8,9 +9,11 @@ const SectionOne = () => {
             <p className="text-lg md:text-xl">Transform your bathroom with our expert shower installation services.</p>
           </div>
           <div className="flex flex-col md:flex-row md:space-x-8">
+         <ScrollOpacity>
             <div className="flex-1 mb-8 md:mb-0">
               <img src="/path/to/your/image1.jpg" alt="Bathroom Makeover" className="w-full h-auto rounded-lg shadow-lg" />
             </div>
+          </ScrollOpacity>
             <div className="flex-1">
               <p className="text-lg md:text-xl mb-4">
                 Our team of professionals is dedicated to providing high-quality custom shower installations that meet your specific needs. We offer a wide range of design options and materials to choose from, ensuring that your new shower is both functional and beautiful.
