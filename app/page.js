@@ -1,113 +1,515 @@
 import Image from "next/image";
 
-export default function Home() {
+
+/**
+ * v0 by Vercel.
+ * @see https://v0.dev/t/uLXGZQFK8Fi
+ * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
+ */
+import Link from "next/link"
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+
+
+export default function Component() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
+    <div className="flex flex-col min-h-[100dvh] bg-[#FFFFFF]">
+      <header className="bg-[#000000] lg:px-6 h-auto flex flex-col items-center">
+        <Link href="/" className="flex items-center justify-center " prefetch={false}>
+        <Image
+              src="/logo.JPEG"
+              alt="Jakeo Tile logan Utah's go to company for luxury tile work"
+             
+              width={90}
               height={24}
               priority
             />
-          </a>
+        </Link>
+        <nav className=" flex justify-center bg-[#2f4b65] w-[100%] pt-2 gap-4 sm:gap-6 ">
+          <Link href="#" className="text-sm font-medium text-white hover:underline underline-offset-4" prefetch={false}>
+            Features
+          </Link>
+          <Link href="#" className="text-sm font-medium text-white hover:underline underline-offset-4" prefetch={false}>
+            About
+          </Link>
+          <Link href="#" className="text-sm font-medium text-white hover:underline underline-offset-4" prefetch={false}>
+            Benefits
+          </Link>
+          <Link href="#" className="text-sm font-medium text-white hover:underline underline-offset-4" prefetch={false}>
+            Testimonials
+          </Link>
+          <Link href="#" className="text-sm font-medium text-white hover:underline underline-offset-4" prefetch={false}>
+            Contact
+          </Link>
+        </nav>
+      </header>
+      <section className="w-full py-8 md:py-24 lg:py-32 bg-[#2f4b65]">
+        <div className="container px-4 md:px-6 ">
+          <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+            <div className="flex flex-col justify-center space-y-4">
+              <div className="space-y-2">
+                <h1 className="text-3xl font-bold tracking-tighter text-white sm:text-5xl xl:text-6xl/none">
+                Experienced Tile Installation Services in Logan, Utah & Surrounding Communities
+                </h1>
+                <p className="max-w-[600px] text-white md:text-xl">
+                Do you Need tile work done in Logan, Utah? Our friendly team offers expert tile installation, serving Logan and nearby communities. From floors to backsplashes,
+                 we provide quality craftsmanship with a personal touch. Contact us to start your project!
+                </p>
+              </div>
+              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <Link
+                  href="#"
+                  className=" inline-flex h-10 items-center justify-center rounded-md bg-white px-8 text-sm font-medium text-[#2f4b65] shadow transition-colors hover:bg-gray-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  prefetch={false}
+                >
+                  Get a Quote
+                </Link>
+              </div>
+            </div>
+            <Image
+              src="/hero-home-edit-2.JPEG"
+              width="550"
+              height="550"
+              alt="Hero"
+              className="mx-auto  overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
+            />
+          </div>
         </div>
-      </div>
+      </section>
+      <section id="features" className="w-full py-12 md:py-24 lg:py-32">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold tracking-tighter text-[#2f4b65] sm:text-5xl">
+                Key Features of Jakeo Tile
+              </h2>
+              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              At Jakeo Tile, we specialize in creating stunning kitchen backsplashes, installing high-quality floor tiles,designing elegant fireplace surrounds, not to mention full bathroom remodels! 
+              Our expert team will work with you to bring your vision to life, transforming your space into a work of art.
+              </p>
+            </div>
+          </div>
+          <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
+            <div className="grid gap-1">
+              <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
+                <TableIcon className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#2f4b65]">Wide Variety of Styles</h3>
+              <p className="text-muted-foreground">
+              At Jakeo Tile, we offer a variety of high-quality tile options including porcelain, ceramic, and natural stone. Whether you're looking for a sleek and modern
+               look or a classic and timeless design, we have the perfect tiles to suit your style and preferences.
+              </p>
+            </div>
+            <div className="grid gap-1">
+              <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
+                <DiscIcon className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#2f4b65]">Exceptional Durability</h3>
+              <p className="text-muted-foreground">
+                Our tiles are built to last, with superior resistance to wear, tear, and weather conditions.
+              </p>
+            </div>
+            <div className="grid gap-1">
+              <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
+                <HomeIcon className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#2f4b65]">Easy Maintenance</h3>
+              <p className="text-muted-foreground">
+                Enjoy the convenience of easy-to-clean tiles that require minimal upkeep to maintain their beautiful
+                appearance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+
+      <section id="tiles" className="bg-muted py-16 px-6 bg-[#f5f5f5]">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold mb-8">Our Tile Options</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <Image src="/nat-stone-floor.webp" width={400} height={300} alt="Tile 1" className="w-full h-48 object-cover" />
+              <div className="p-4">
+                <h3 className="text-xl font-bold mb-2 text-[#2f4b65]">Natural Stone</h3>
+                <p className="text-muted-foreground">
+                Refined and enduring, our natural stone tiles bring a sophisticated, organic elegance to any environment.
+                </p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <Image src="/ceramic-tile.webp" width={400} height={300} alt="Tile 2" className="w-full h-48 object-cover" />
+              <div className="p-4">
+                <h3 className="text-xl font-bold mb-2 text-[#2f4b65]">Ceramic Tile</h3>
+                <p className="text-muted-foreground">
+                  Durable and versatile, our ceramic tiles are perfect for any room.
+                </p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <Image src="/porcelain-tile.webp" width={400} height={300} alt="Tile 3" className="w-full h-48 object-cover" />
+              <div className="p-4">
+                <h3 className="text-xl font-bold mb-2 text-[#2f4b65]">Porcelain Tile</h3>
+                <p className="text-muted-foreground">
+                  Sophisticated and modern, our porcelain tiles offer a sleek look.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-[#f5f5f5]">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold tracking-tighter text-[#2f4b65] sm:text-5xl">
+                Explore Our Tile Styles
+              </h2>
+              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Tile styles to fit your luxury flooring project.
+              </p>
+            </div>
+          </div>
+          <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
+            <div className="grid gap-1">
+              <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
+                <TableIcon className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#2f4b65]">Subway Tiles</h3>
+              <p className="text-muted-foreground">
+              Classic and versatile, subway tiles offer a clean and modern look perfect for any space.
+              </p>
+            </div>
+            <div className="grid gap-1">
+              <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
+                <TableIcon className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#2f4b65]">Large Format Tiles</h3>
+              <p className="text-muted-foreground">
+              Sleek and expansive, large format tiles create a seamless, contemporary aesthetic.
+              </p>
+            </div>
+            <div className="grid gap-1">
+              <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
+                <TableIcon className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#2f4b65]">Zellige Tiles</h3>
+              <p className="text-muted-foreground">
+              Handcrafted and unique, Zellige tiles bring a rich, artisanal charm with their organic imperfections.
+              </p>
+            </div>
+            <div className="grid gap-1">
+              <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
+                <TableIcon className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#2f4b65]">Mosaic Tiles</h3>
+              <p className="text-muted-foreground">
+              Intricate and eye-catching, mosaic tiles add vibrant detail and texture to any design.
+              </p>
+            </div>
+            
+          
+          </div>
+        </div>
+      </section>
+      <section id="about" className="w-full py-12 md:py-24 lg:py-32">
+        <div className="container px-4 md:px-6">
+          <div className="lg:grid lg:gap-6 lg:grid-cols-2 lg:gap-12">
+            <Image
+              src="/jakeo-owner.JPEG"
+              width="550"
+              height="310"
+              alt="About"
+              className="mx-auto overflow-hidden rounded-xl object-cover object-center sm:w-full"
+            />
+            <div className="flex flex-col justify-center space-y-4">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter text-[#2f4b65] sm:text-4xl md:text-5xl">
+                  About Jakeo Tile
+                </h2>
+                <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                 
+                Jake Jones, the heart behind Reval Floor Coverings, always had a passion for all types of flooring.
+                 However, as he worked more with tiles, he found himself increasingly drawn to their versatility and beauty.
+                  
+                </p>
+                <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                This newfound love led him to narrow his focus and rebrand his business as Jakeo Tile. 
+                  The new name captures the personal touch and dedication Jake brings to every project, highlighting his
+                   love for creating stunning tile installations. 
+                </p>
+                <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Jakeo Tile is a reflection of Jake's journey and growth. Specializing in custom tile solutions,
+                 the company has become a trusted name in Logan, Utah. Jake takes pride in crafting unique and beautiful
+                 spaces, offering a warm and personalized experience for each client.
+                </p>
+                <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                 The transition to Jakeo Tile was
+                   more than just a name change; it was a heartfelt shift towards a niche that Jake truly loves, allowing
+                    him to pour his creativity and care into every tile he installs..
+                </p>
+              </div>
+              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <Link
+                  href="#"
+                  className="inline-flex h-10 items-center justify-center rounded-md bg-[#2f4b65] px-8 text-sm font-medium text-white shadow transition-colors hover:bg-[#1e3648] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  prefetch={false}
+                >
+                  Learn More
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="benefits" className="w-full py-12 md:py-24 lg:py-32 bg-[#f5f5f5]">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold tracking-tighter text-[#2f4b65] sm:text-5xl">
+                Benefits of going with Jakeo Tile
+              </h2>
+              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              At Jakeo Tile, we offer personalized service and attention to detail, ensuring your tile project exceeds your expectations.
+              </p>
+            </div>
+          </div>
+          <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
+            <div className="grid gap-1">
+              <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
+                <DiscIcon className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#2f4b65]">Expert Craftsmanship</h3>
+              <p className="text-muted-foreground">
+                Our flooring jobs are crafted to withstand heavy foot traffic, moisture, and other environmental factors, ensuring
+                long-lasting performance and stunning beauty.
+              </p>
+            </div>
+            <div className="grid gap-1">
+              <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
+                <HomeIcon className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#2f4b65]">Easy Maintenance</h3>
+              <p className="text-muted-foreground">
+                Enjoy the convenience of tiles that are simple to clean and maintain, keeping your space looking its
+                best with minimal effort.
+              </p>
+            </div>
+            <div className="grid gap-1">
+              <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
+                <TableIcon className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#2f4b65]">Stylish Luxury Materials</h3>
+              <p className="text-muted-foreground">
+              Our tiles come in a wide range of designs to complement any decor.Choose from a wide selection of high-quality porcelain, ceramic, marble, and granite tiles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+{/**Bottom half*/}
+
+<section id="testimonials" className="py-16 px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold mb-8">What Our Customers Say</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div className="bg-background rounded-lg shadow-md p-6">
+              <div className="flex items-center mb-4">
+                <img src="/review-1.png" width={222} height={222} alt="Customer 1" className=" mr-4" />
+               
+              </div>
+              <p className="text-muted-foreground">
+              Jake is an incredible craftsman! His ideas were inspired and the execution flawless!
+               This is the second job he has done and they are both amazing. Any tile work you need he is the man!💯
+              </p>
+            </div>
+
+            <div className="bg-background rounded-lg shadow-md p-6">
+              <div className="flex items-center mb-4">
+                <img src="/review-2.png" width={222} height={222} alt="Customer 2" className=" mr-4" />
+               
+              </div>
+              <p className="text-muted-foreground">
+              Jake (Jakeo Tile ) did the BEST tile work we’ve ever had done. He tiled our large entry floor and tiled around our fireplace. From start to finish, he did an excellent job. He was very nice to work with. He listened to our ideas, and discussed how he could accomplish what we wanted. 
+              </p>
+              <p className="text-muted-foreground">
+              He is very neat too. He hung plastic right from the beginning to keep the rest of our home clean. He removed the baseboards carefully so they didn't get damaged. After the tile work was done, he trimmed the baseboards so they fit perfectly.   
+              </p>
+              <p className="text-muted-foreground">
+              We used 60” x 30” tiles in our entry. Jake was great working with these extra large tiles. He had to cut around 4 pillars and a rounded stair. His cuts were amazing! There is no lippage between tiles because Jake lined each one up perfectly with the tile next to it.     
+              </p>
+              <p className="text-muted-foreground">
+              It feels smooth under my bare feet. He pays close attention to every detail.  His prices are very competitive.
+Over the last 30 years we’ve had many different tile jobs done between the 2 homes we’ve had built & remodeled. We hired some really good tilers, but Jake Jones’ tile work is SUPERIOR to all of the others. We highly recommend him & we will definitely use him again!  
+              </p>
+            
+            </div>
+
+            <div className="bg-background rounded-lg shadow-md p-6">
+              <div className="flex items-center mb-4">
+                <img src="/review-3.png" width={222} height={222} alt="Customer 3" className=" mr-4" />
+              
+              </div>
+              <p className="text-muted-foreground">
+              Jake has done a great job and done 3 projects for us.  All of them have gone smoothly, and quality work, and completed on schedule.
+                Give Jake a call for your next tile project, you wont be disappointed.
+              </p>
+            </div>
+
+            <div className="bg-background rounded-lg shadow-md p-6">
+              <div className="flex items-center mb-4">
+                <img src="/review-4.png" width={222} height={222} alt="Customer 3" className=" mr-4" />
+              
+              </div>
+              <p className="text-muted-foreground">
+              I had an odd circumstance.  My needs were not only met but exceeded my expectations.  I know Jake went out of his way to help me problem solve which added more time to his day. He was very patient with me and not only got the job done it was fantastic.
+                Thank you for all that you did I will definitely use and recommend.
+              </p>
+            </div>
+
+            <div className="bg-background rounded-lg shadow-md p-6">
+              <div className="flex items-center mb-4">
+                <img src="/review-5.png" width={222} height={222} alt="Customer 3" className=" mr-4" />
+              
+              </div>
+              <p className="text-muted-foreground">
+              Jake did an outstanding job at a very competitive price
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <section id="contact" className="bg-[#000000] text-white py-16 px-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-2xl font-bold mb-4">Ready to Transform Your Space?</h2>
+          <p className="text-lg mb-8">Contact us today to get a free quote and start your tile project.</p>
+          <form className="max-w-md mx-auto flex gap-4">
+            <Input type="email" placeholder="Enter your email" className="flex-1" />
+            <Button type="submit" variant="secondary">
+              Get a Quote
+            </Button>
+          </form>
+        </div>
+      </section>
+      <footer className="bg-[#2f4b65] text-white py-8 px-6">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between">
+          <div className="flex items-center gap-2 mb-4 md:mb-0">
+          <Link href="#" className="flex items-center justify-center " prefetch={false}>
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+              src="/logo.JPEG"
+              alt="Jakeo Tile logan Utah's go to company for luxury tile work"
+             
+              width={90}
+              height={24}
+              priority
+            />
+        </Link>
+          </div>
+          <nav className="flex items-center gap-6">
+            <Link href="#" className="hover:underline" prefetch={false}>
+              Privacy Policy
+            </Link>
+            <Link href="#" className="hover:underline" prefetch={false}>
+              Terms of Service
+            </Link>
+            <Link href="#" className="hover:underline" prefetch={false}>
+              Contact Us
+            </Link>
+          </nav>
+        </div>
+      </footer>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+    </div>
+  )
+}
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+function DiscIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <circle cx="12" cy="12" r="2" />
+    </svg>
+  )
+}
+
+
+function HomeIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+      <polyline points="9 22 9 12 15 12 15 22" />
+    </svg>
+  )
+}
+
+
+function TableIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M12 3v18" />
+      <rect width="18" height="18" x="3" y="3" rx="2" />
+      <path d="M3 9h18" />
+      <path d="M3 15h18" />
+    </svg>
+  )
+}
+
+
+function XIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M18 6 6 18" />
+      <path d="m6 6 12 12" />
+    </svg>
+  )
 }
