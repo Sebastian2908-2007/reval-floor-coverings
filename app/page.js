@@ -9,7 +9,10 @@ import Image from "next/image";
 import Link from "next/link"
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-
+import StyleSubway from '../public/subway-tiles.jpg';
+import StyleMosaic from '../public/mosaic-tiles.jpg';
+import StyleLrgFormat from '../public/large-format-tiles.jpg';
+import StyleZellige from '../public/zellige-tiles.jpg';
 
 export default function Component() {
   return (
@@ -20,8 +23,8 @@ export default function Component() {
               src="/logo.JPEG"
               alt="Jakeo Tile logan Utah's go to company for luxury tile work"
              
-              width={90}
-              height={24}
+              width={150}
+              height={100}
               priority
             />
         </Link>
@@ -43,13 +46,14 @@ export default function Component() {
           </Link>
         </nav>
       </header>
+      
       <section className="w-full py-8 md:py-24 lg:py-32 bg-[#2f4b65]">
         <div className="container px-4 md:px-6 ">
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter text-white sm:text-5xl xl:text-6xl/none">
-                Experienced Tile Installation Services in Logan, Utah & Surrounding Communities
+                <h1 className="text-3xl w-[85%] font-bold tracking-tighter text-white sm:text-5xl xl:text-6xl/none">
+                Experienced Tile Installation Services Near Logan, Utah 
                 </h1>
                 <p className="max-w-[600px] text-white md:text-xl">
                 Do you Need tile work done in Logan, Utah? Our friendly team offers expert tile installation, serving Logan and nearby communities. From floors to backsplashes,
@@ -171,7 +175,10 @@ export default function Component() {
               </p>
             </div>
           </div>
+
           <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
+            
+            <div className="grid grid-cols-2">
             <div className="grid gap-1">
               <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
                 <TableIcon className="h-6 w-6 text-white" />
@@ -181,15 +188,65 @@ export default function Component() {
               Classic and versatile, subway tiles offer a clean and modern look perfect for any space.
               </p>
             </div>
-            <div className="grid gap-1">
-              <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
+            <div className="
+             relative
+             flex 
+             w-[100%]
+             
+             rounded-xl
+             min-[1024px]:w-[80%]
+             
+             min-[1024px]:mb-8
+             min-[1920px]:mb-14
+             
+           ">
+           <Image
+             className="
+           shadow-xl
+            rounded-xl"
+             src={StyleSubway}
+             alt="St George's BJ's Painting and Epoxy Floors applying an epoxy floor"
+             sizes='80vw'
+            
+           />
+         </div>
+          </div>
+
+          <div className="grid grid-cols-2">
+          <div className="
+             relative
+             flex 
+             w-[100%]
+             
+             rounded-xl
+             min-[1024px]:w-[80%]
+             
+             min-[1024px]:mb-8
+             min-[1920px]:mb-14
+             
+           ">
+           <Image
+             className="
+           shadow-xl
+            rounded-xl"
+             src={StyleLrgFormat}
+             alt="St George's BJ's Painting and Epoxy Floors applying an epoxy floor"
+             sizes='80vw'
+            
+           />
+         </div>
+            <div className="grid gap-1 pl-6">
+              <div className=" flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
                 <TableIcon className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-[#2f4b65]">Large Format Tiles</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-lg  font-bold text-[#2f4b65]">Large Format Tiles</h3>
+              <p className="text-muted-foreground ">
               Sleek and expansive, large format tiles create a seamless, contemporary aesthetic.
               </p>
             </div>
+            </div>
+
+            <div className="grid grid-cols-2">
             <div className="grid gap-1">
               <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
                 <TableIcon className="h-6 w-6 text-white" />
@@ -199,7 +256,54 @@ export default function Component() {
               Handcrafted and unique, Zellige tiles bring a rich, artisanal charm with their organic imperfections.
               </p>
             </div>
-            <div className="grid gap-1">
+            <div className="
+             relative
+             flex 
+             w-[100%]
+             
+             rounded-xl
+             min-[1024px]:w-[80%]
+             
+             min-[1024px]:mb-8
+             min-[1920px]:mb-14
+             
+           ">
+           <Image
+             className="
+           shadow-xl
+            rounded-xl"
+             src={StyleZellige}
+             alt="St George's BJ's Painting and Epoxy Floors applying an epoxy floor"
+             sizes='80vw'
+            
+           />
+         </div>
+          </div>
+
+          <div className="grid grid-cols-2">
+          <div className="
+             relative
+             flex 
+             w-[100%]
+             
+             rounded-xl
+             min-[1024px]:w-[80%]
+             
+             min-[1024px]:mb-8
+             min-[1920px]:mb-14
+             
+           ">
+           <Image
+             className="
+           shadow-xl
+            rounded-xl"
+             src={StyleMosaic}
+             alt="St George's BJ's Painting and Epoxy Floors applying an epoxy floor"
+             sizes='80vw'
+            
+           />
+         </div>
+            <div className="grid gap-1 pl-6">
               <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
                 <TableIcon className="h-6 w-6 text-white" />
               </div>
@@ -208,7 +312,7 @@ export default function Component() {
               Intricate and eye-catching, mosaic tiles add vibrant detail and texture to any design.
               </p>
             </div>
-            
+            </div>
           
           </div>
         </div>
@@ -217,7 +321,7 @@ export default function Component() {
         <div className="container px-4 md:px-6">
           <div className="lg:grid lg:gap-6 lg:grid-cols-2 lg:gap-12">
             <Image
-              src="/jakeo-owner.JPEG"
+              src="/owner-2.jpg"
               width="550"
               height="310"
               alt="About"
