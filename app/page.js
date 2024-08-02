@@ -8,7 +8,7 @@ import Image from "next/image";
  */
 import Link from "next/link"
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import SmsCall from "./components/SmsCall";
 import StyleSubway from '../public/subway-tiles.jpg';
 import StyleMosaic from '../public/mosaic-tiles.jpg';
 import StyleLrgFormat from '../public/large-format-tiles.jpg';
@@ -17,35 +17,6 @@ import StyleZellige from '../public/zellige-tiles.jpg';
 export default function Component() {
   return (
     <div className="flex flex-col min-h-[100dvh] bg-[#FFFFFF]">
-      <header className="bg-[#000000] lg:px-6 h-auto flex flex-col items-center">
-        <Link href="/" className="flex items-center justify-center " prefetch={false}>
-        <Image
-              src="/logo.JPEG"
-              alt="Jakeo Tile logan Utah's go to company for luxury tile work"
-             
-              width={150}
-              height={100}
-              priority
-            />
-        </Link>
-        <nav className=" flex justify-center bg-[#2f4b65] w-[100%] pt-2 gap-4 sm:gap-6 ">
-          <Link href="#" className="text-sm font-medium text-white hover:underline underline-offset-4" prefetch={false}>
-            Features
-          </Link>
-          <Link href="#" className="text-sm font-medium text-white hover:underline underline-offset-4" prefetch={false}>
-            About
-          </Link>
-          <Link href="#" className="text-sm font-medium text-white hover:underline underline-offset-4" prefetch={false}>
-            Benefits
-          </Link>
-          <Link href="#" className="text-sm font-medium text-white hover:underline underline-offset-4" prefetch={false}>
-            Testimonials
-          </Link>
-          <Link href="#" className="text-sm font-medium text-white hover:underline underline-offset-4" prefetch={false}>
-            Contact
-          </Link>
-        </nav>
-      </header>
       
       <section className="w-full py-8 md:py-24 lg:py-32 bg-[#2f4b65]">
         <div className="container px-4 md:px-6 ">
@@ -100,8 +71,7 @@ export default function Component() {
               </div>
               <h3 className="text-lg font-bold text-[#2f4b65]">Wide Variety of Styles</h3>
               <p className="text-muted-foreground">
-              At Jakeo Tile, we offer a variety of high-quality tile options including porcelain, ceramic, and natural stone. Whether you're looking for a sleek and modern
-               look or a classic and timeless design, we have the perfect tiles to suit your style and preferences.
+              At Jakeo Tile, we provide top-quality porcelain, ceramic, and natural stone tiles to match any style, from sleek and modern to classic and timeless.
               </p>
             </div>
             <div className="grid gap-1">
@@ -491,41 +461,11 @@ Over the last 30 years we’ve had many different tile jobs done between the 2 h
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-2xl font-bold mb-4">Ready to Transform Your Space?</h2>
           <p className="text-lg mb-8">Contact us today to get a free quote and start your tile project.</p>
-          <form className="max-w-md mx-auto flex gap-4">
-            <Input type="email" placeholder="Enter your email" className="flex-1" />
-            <Button type="submit" variant="secondary">
-              Get a Quote
-            </Button>
-          </form>
+         <SmsCall/>
         </div>
       </section>
-      <footer className="bg-[#2f4b65] text-white py-8 px-6">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between">
-          <div className="flex items-center gap-2 mb-4 md:mb-0">
-          <Link href="#" className="flex items-center justify-center " prefetch={false}>
-        <Image
-              src="/logo.JPEG"
-              alt="Jakeo Tile logan Utah's go to company for luxury tile work"
-             
-              width={90}
-              height={24}
-              priority
-            />
-        </Link>
-          </div>
-          <nav className="flex items-center gap-6">
-            <Link href="#" className="hover:underline" prefetch={false}>
-              Privacy Policy
-            </Link>
-            <Link href="#" className="hover:underline" prefetch={false}>
-              Terms of Service
-            </Link>
-            <Link href="#" className="hover:underline" prefetch={false}>
-              Contact Us
-            </Link>
-          </nav>
-        </div>
-      </footer>
+
+      
 
 
 
