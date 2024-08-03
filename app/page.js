@@ -181,7 +181,7 @@ export default function Home() {
              relative
              flex 
              w-[100%]
-             
+             h-[100%]
              rounded-xl
              min-[1024px]:w-[80%]
              
@@ -206,7 +206,7 @@ export default function Home() {
              relative
              flex 
              w-[100%]
-             
+             h-[100%]
              rounded-xl
              min-[1024px]:w-[80%]
              
@@ -249,7 +249,7 @@ export default function Home() {
              relative
              flex 
              w-[100%]
-             
+             h-[100%]
              rounded-xl
              min-[1024px]:w-[80%]
              
@@ -274,7 +274,7 @@ export default function Home() {
              relative
              flex 
              w-[100%]
-             
+             h-[100%]
              rounded-xl
              min-[1024px]:w-[80%]
              
