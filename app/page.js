@@ -17,7 +17,7 @@ const ScrollFromLeft = dynamic(() =>import('./components/ScrollFromLeft'), {ssr:
 
 const StaticScrollOpacity = dynamic(() =>import( "./components/StaticScrollOpacity"), {ssr: false});;
 
-export default function Component() {
+export default function Home() {
   return (
     <div className="flex flex-col min-h-[100dvh] bg-[#FFFFFF]">
       

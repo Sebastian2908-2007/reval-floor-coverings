@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 
-export default function Component() {
+export default function Contact() {
   return (
     <div className="bg-[#2f4b65] text-white py-12 md:py-20 lg:py-24">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
