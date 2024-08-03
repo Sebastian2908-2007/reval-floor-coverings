@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+/*import Header from "../components/Header";
 import Hero from "../components/Hero";
 import SectionOne from "../components/sectionOne";
 import SectionTwo from "../components/SectionTwo";
@@ -18,10 +18,10 @@ const Test = () => {
         <SectionFour />
         <SectionFive />
         <SectionSix />
-        {/* Add other sections here */}
+   
         
       </div>
     );
   };
   
-  export default Test;
+  export default Test;*/
