@@ -192,7 +192,9 @@ export default function Home() {
            <Image
              className="
            shadow-xl
-            rounded-xl"
+            rounded-xl
+            h-[100%]
+            "
              src={StyleSubway}
              alt="St George's BJ's Painting and Epoxy Floors applying an epoxy floor"
              sizes='80vw'
@@ -217,7 +219,9 @@ export default function Home() {
            <Image
              className="
            shadow-xl
-            rounded-xl"
+            rounded-xl
+            h-[100%]
+            "
              src={StyleLrgFormat}
              alt="St George's BJ's Painting and Epoxy Floors applying an epoxy floor"
              sizes='80vw'
@@ -260,7 +264,9 @@ export default function Home() {
            <Image
              className="
            shadow-xl
-            rounded-xl"
+            rounded-xl
+            h-[100%]
+            "
              src={StyleZellige}
              alt="St George's BJ's Painting and Epoxy Floors applying an epoxy floor"
              sizes='80vw'
@@ -274,10 +280,10 @@ export default function Home() {
              relative
              flex 
              w-[100%]
-             h-[100%]
+             
              rounded-xl
              min-[1024px]:w-[80%]
-             
+             h-[100%]
              min-[1024px]:mb-8
              min-[1920px]:mb-14
              
@@ -285,7 +291,9 @@ export default function Home() {
            <Image
              className="
            shadow-xl
-            rounded-xl"
+            rounded-xl
+            h-[100%]
+            "
              src={StyleMosaic}
              alt="St George's BJ's Painting and Epoxy Floors applying an epoxy floor"
              sizes='80vw'
