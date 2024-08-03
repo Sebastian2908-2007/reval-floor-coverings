@@ -15,7 +15,7 @@ import StyleZellige from '../public/zellige-tiles.jpg';
 const ScrollFromRight = dynamic(() =>import('./components/ScrollFromRight'), {ssr: false});
 const ScrollFromLeft = dynamic(() =>import('./components/ScrollFromLeft'), {ssr: false});
 
-import StaticScrollOpacity from "./components/StaticScrollOpacity";
+const StaticScrollOpacity = dynamic(() =>import( "./components/StaticScrollOpacity"), {ssr: false});;
 
 export default function Component() {
   return (
