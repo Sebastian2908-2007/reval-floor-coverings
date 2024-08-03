@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import dynamic from "next/dynamic";
 
 /**
  * v0 by Vercel.
@@ -7,18 +7,21 @@ import Image from "next/image";
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
 import Link from "next/link"
-import { Button } from "@/components/ui/button";
 import SmsCall from "./components/SmsCall";
 import StyleSubway from '../public/subway-tiles.jpg';
 import StyleMosaic from '../public/mosaic-tiles.jpg';
 import StyleLrgFormat from '../public/large-format-tiles.jpg';
 import StyleZellige from '../public/zellige-tiles.jpg';
+const ScrollFromRight = dynamic(() =>import('./components/ScrollFromRight'), {ssr: false});
+const ScrollFromLeft = dynamic(() =>import('./components/ScrollFromLeft'), {ssr: false});
+
+import StaticScrollOpacity from "./components/StaticScrollOpacity";
 
 export default function Component() {
   return (
     <div className="flex flex-col min-h-[100dvh] bg-[#FFFFFF]">
       
-      <section className="w-full py-8 md:py-24 lg:py-32 bg-[#2f4b65]">
+      <section className="w-full py-8 md:py-14 lg:py-32 bg-[#2f4b65]">
         <div className="container px-4 md:px-6 ">
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
             <div className="flex flex-col justify-center space-y-4">
@@ -33,7 +36,7 @@ export default function Component() {
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Link
-                  href="#"
+                  href="tel:435-994-4143"
                   className=" inline-flex h-10 items-center justify-center rounded-md bg-white px-8 text-sm font-medium text-[#2f4b65] shadow transition-colors hover:bg-gray-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                   prefetch={false}
                 >
@@ -41,19 +44,22 @@ export default function Component() {
                 </Link>
               </div>
             </div>
+           
             <Image
               src="/hero-home-edit-2.JPEG"
               width="550"
               height="550"
               alt="Hero"
-              className="mx-auto  overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
+              className="mx-auto md:aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
             />
+           
           </div>
         </div>
       </section>
       <section id="features" className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <StaticScrollOpacity>
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter text-[#2f4b65] sm:text-5xl">
                 Key Features of Jakeo Tile
@@ -63,8 +69,10 @@ export default function Component() {
               Our expert team will work with you to bring your vision to life, transforming your space into a work of art.
               </p>
             </div>
+            </StaticScrollOpacity>
           </div>
           <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
+            <StaticScrollOpacity>
             <div className="grid gap-1">
               <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
                 <TableIcon className="h-6 w-6 text-white" />
@@ -74,6 +82,8 @@ export default function Component() {
               At Jakeo Tile, we provide top-quality porcelain, ceramic, and natural stone tiles to match any style, from sleek and modern to classic and timeless.
               </p>
             </div>
+            </StaticScrollOpacity>
+            <StaticScrollOpacity>
             <div className="grid gap-1">
               <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
                 <DiscIcon className="h-6 w-6 text-white" />
@@ -83,6 +93,8 @@ export default function Component() {
                 Our tiles are built to last, with superior resistance to wear, tear, and weather conditions.
               </p>
             </div>
+            </StaticScrollOpacity>
+            <StaticScrollOpacity>
             <div className="grid gap-1">
               <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
                 <HomeIcon className="h-6 w-6 text-white" />
@@ -93,6 +105,7 @@ export default function Component() {
                 appearance.
               </p>
             </div>
+            </StaticScrollOpacity>
           </div>
         </div>
       </section>
@@ -102,6 +115,7 @@ export default function Component() {
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold mb-8">Our Tile Options</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <ScrollFromRight>
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <Image src="/nat-stone-floor.webp" width={400} height={300} alt="Tile 1" className="w-full h-48 object-cover" />
               <div className="p-4">
@@ -111,6 +125,8 @@ export default function Component() {
                 </p>
               </div>
             </div>
+            </ScrollFromRight>
+            <ScrollFromLeft>
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <Image src="/ceramic-tile.webp" width={400} height={300} alt="Tile 2" className="w-full h-48 object-cover" />
               <div className="p-4">
@@ -120,6 +136,8 @@ export default function Component() {
                 </p>
               </div>
             </div>
+            </ScrollFromLeft>
+            <ScrollFromRight>
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <Image src="/porcelain-tile.webp" width={400} height={300} alt="Tile 3" className="w-full h-48 object-cover" />
               <div className="p-4">
@@ -129,12 +147,13 @@ export default function Component() {
                 </p>
               </div>
             </div>
+            </ScrollFromRight>
           </div>
         </div>
       </section>
 
-      <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-[#f5f5f5]">
-        <div className="container px-4 md:px-6">
+      <section id="features" className="w-full py-12 md:py-14 lg:py-32 bg-[#f5f5f5]">
+        <div className="container px-1 min-[390px]:px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter text-[#2f4b65] sm:text-5xl">
@@ -146,10 +165,10 @@ export default function Component() {
             </div>
           </div>
 
-          <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
+          <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
             
             <div className="grid grid-cols-2">
-            <div className="grid gap-1">
+            <div className="grid min-[375px]:gap-1 min-[768px]:p-2 min-[820px]:p-4">
               <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
                 <TableIcon className="h-6 w-6 text-white" />
               </div>
@@ -205,7 +224,7 @@ export default function Component() {
             
            />
          </div>
-            <div className="grid gap-1 pl-6">
+            <div className="grid min-[375px]:gap-1 pl-[.5em] min-[768px]:p-2 min-[820px]:p-4">
               <div className=" flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
                 <TableIcon className="h-6 w-6 text-white" />
               </div>
@@ -217,7 +236,7 @@ export default function Component() {
             </div>
 
             <div className="grid grid-cols-2">
-            <div className="grid gap-1">
+            <div className="grid min-[375px]:gap-1 min-[768px]:p-2 min-[820px]:p-4">
               <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
                 <TableIcon className="h-6 w-6 text-white" />
               </div>
@@ -273,7 +292,7 @@ export default function Component() {
             
            />
          </div>
-            <div className="grid gap-1 pl-6">
+            <div className="grid min-[375px]:gap-1 pl-[.5em] min-[768px]:p-2 min-[820px]:p-4">
               <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
                 <TableIcon className="h-6 w-6 text-white" />
               </div>
@@ -288,7 +307,7 @@ export default function Component() {
         </div>
       </section>
       <section id="about" className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6">
+        <div className="container px-4 md:px-6 min-[912px]:px-28">
           <div className="lg:grid lg:gap-6 lg:grid-cols-2 lg:gap-12">
             <Image
               src="/owner-2.jpg"
@@ -297,7 +316,7 @@ export default function Component() {
               alt="About"
               className="mx-auto overflow-hidden rounded-xl object-cover object-center sm:w-full"
             />
-            <div className="flex flex-col justify-center space-y-4">
+            <div className="mt-4 flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter text-[#2f4b65] sm:text-4xl md:text-5xl">
                   About Jakeo Tile
@@ -326,7 +345,7 @@ export default function Component() {
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Link
-                  href="#"
+                  href="tel:435-994-4143"
                   className="inline-flex h-10 items-center justify-center rounded-md bg-[#2f4b65] px-8 text-sm font-medium text-white shadow transition-colors hover:bg-[#1e3648] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                   prefetch={false}
                 >
@@ -403,24 +422,15 @@ export default function Component() {
 
             <div className="bg-background rounded-lg shadow-md p-6">
               <div className="flex items-center mb-4">
-                <img src="/review-2.png" width={222} height={222} alt="Customer 2" className=" mr-4" />
-               
+                <img src="/review-5.png" width={222} height={222} alt="Customer 3" className=" mr-4" />
+              
               </div>
               <p className="text-muted-foreground">
-              Jake (Jakeo Tile ) did the BEST tile work we’ve ever had done. He tiled our large entry floor and tiled around our fireplace. From start to finish, he did an excellent job. He was very nice to work with. He listened to our ideas, and discussed how he could accomplish what we wanted. 
+              Jake did an outstanding job at a very competitive price
               </p>
-              <p className="text-muted-foreground">
-              He is very neat too. He hung plastic right from the beginning to keep the rest of our home clean. He removed the baseboards carefully so they didn't get damaged. After the tile work was done, he trimmed the baseboards so they fit perfectly.   
-              </p>
-              <p className="text-muted-foreground">
-              We used 60” x 30” tiles in our entry. Jake was great working with these extra large tiles. He had to cut around 4 pillars and a rounded stair. His cuts were amazing! There is no lippage between tiles because Jake lined each one up perfectly with the tile next to it.     
-              </p>
-              <p className="text-muted-foreground">
-              It feels smooth under my bare feet. He pays close attention to every detail.  His prices are very competitive.
-Over the last 30 years we’ve had many different tile jobs done between the 2 homes we’ve had built & remodeled. We hired some really good tilers, but Jake Jones’ tile work is SUPERIOR to all of the others. We highly recommend him & we will definitely use him again!  
-              </p>
-            
             </div>
+
+           
 
             <div className="bg-background rounded-lg shadow-md p-6">
               <div className="flex items-center mb-4">
@@ -444,14 +454,27 @@ Over the last 30 years we’ve had many different tile jobs done between the 2 h
               </p>
             </div>
 
+            
+
             <div className="bg-background rounded-lg shadow-md p-6">
               <div className="flex items-center mb-4">
-                <img src="/review-5.png" width={222} height={222} alt="Customer 3" className=" mr-4" />
-              
+                <img src="/review-2.png" width={222} height={222} alt="Customer 2" className=" mr-4" />
+               
               </div>
               <p className="text-muted-foreground">
-              Jake did an outstanding job at a very competitive price
+              Jake (Jakeo Tile ) did the BEST tile work we’ve ever had done. He tiled our large entry floor and tiled around our fireplace. From start to finish, he did an excellent job. He was very nice to work with. He listened to our ideas, and discussed how he could accomplish what we wanted. 
               </p>
+              <p className="text-muted-foreground">
+              He is very neat too. He hung plastic right from the beginning to keep the rest of our home clean. He removed the baseboards carefully so they didn't get damaged. After the tile work was done, he trimmed the baseboards so they fit perfectly.   
+              </p>
+              <p className="text-muted-foreground">
+              We used 60” x 30” tiles in our entry. Jake was great working with these extra large tiles. He had to cut around 4 pillars and a rounded stair. His cuts were amazing! There is no lippage between tiles because Jake lined each one up perfectly with the tile next to it.     
+              </p>
+              <p className="text-muted-foreground">
+              It feels smooth under my bare feet. He pays close attention to every detail.  His prices are very competitive.
+Over the last 30 years we’ve had many different tile jobs done between the 2 homes we’ve had built & remodeled. We hired some really good tilers, but Jake Jones’ tile work is SUPERIOR to all of the others. We highly recommend him & we will definitely use him again!  
+              </p>
+            
             </div>
 
           </div>

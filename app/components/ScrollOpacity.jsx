@@ -1,14 +1,27 @@
 'use client'
-// components/ScrollFadeIn.js
-import { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+
+import React, { useEffect, useRef, useState } from 'react';
+import { motion, useAnimation, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const ScrollOpacity = ({ children }) => {
   const controls = useAnimation();
-  const { ref, inView } = useInView({
-    threshold: 0.1, // Trigger animation when 10% of the component is in view
+  const ref = useRef();
+  const { scrollY } = useScroll();
+  const { ref: inViewRef, inView } = useInView({
+    threshold: 0, // Start changing opacity as soon as the component comes into view
   });
+
+  const [elementTop, setElementTop] = useState(0);
+  const [elementHeight, setElementHeight] = useState(0);
+
+  useEffect(() => {
+    if (ref.current) {
+      const rect = ref.current.getBoundingClientRect();
+      setElementTop(rect.top + window.scrollY);
+      setElementHeight(rect.height);
+    }
+  }, [ref]);
 
   useEffect(() => {
     if (inView) {
@@ -18,9 +31,19 @@ const ScrollOpacity = ({ children }) => {
     }
   }, [controls, inView]);
 
+  const opacity = useTransform(
+    scrollY,
+    [elementTop - window.innerHeight, elementTop + elementHeight],
+    [0, 1]
+  );
+
   return (
     <motion.div
-      ref={ref}
+      ref={node => {
+        ref.current = node;
+        inViewRef(node);
+      }}
+      style={{ opacity }}
       initial="hidden"
       animate={controls}
       variants={{
@@ -34,3 +57,5 @@ const ScrollOpacity = ({ children }) => {
 };
 
 export default ScrollOpacity;
+
+

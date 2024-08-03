@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 const Header = () => {
   return (
-    <header className="bg-[#000000] lg:px-6 h-auto flex flex-col items-center">
+    <header className="bg-[#000000]  h-auto flex flex-col items-center">
     <Link href="/" className="flex items-center justify-center " prefetch={false}>
     <Image
           src="/logo.JPEG"
