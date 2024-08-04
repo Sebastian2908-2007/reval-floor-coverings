@@ -1,11 +1,5 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
-
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/uLXGZQFK8Fi
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
 import Link from "next/link"
 import SmsCall from "./components/SmsCall";
 import StyleSubway from '../public/subway-tiles.jpg';
@@ -16,6 +10,34 @@ const ScrollFromRight = dynamic(() =>import('./components/ScrollFromRight'), {ss
 const ScrollFromLeft = dynamic(() =>import('./components/ScrollFromLeft'), {ssr: false});
 
 const StaticScrollOpacity = dynamic(() =>import( "./components/StaticScrollOpacity"), {ssr: false});;
+
+export const metadata = {
+  title: "Jakeo Tile || Tile Installation in Logan Utah | Professional Tile Services",
+  description: "Looking for expert tile installation in Logan, Utah? Jakeo Tile offers professional tile installation services for both residential and commercial properties. Our skilled team provides high-quality workmanship and a wide range of tile options to suit any style. Contact us today to enhance your space with our expert tile services.",
+  keywords: [
+    'tile installation Logan Utah',
+    'tile installers Logan Utah',
+    'Jakeo Tile Logan Utah',
+    'floor tile installation Logan Utah',
+    'kitchen tile Logan Utah',
+    'bathroom tile Logan Utah',
+    'commercial tile installation Logan Utah',
+    'residential tile installation Logan Utah',
+    'tile contractors Logan Utah',
+    'custom tile work Logan Utah',
+  ],
+  metadataBase: new URL('https://reval-floor-coverings.vercel.app/'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-US',
+      'es-ES': '/es-ES',
+    },
+  },
+  openGraph: {
+    images: '/og-image.png',
+  },
+};
 
 export default function Home() {
   return (
