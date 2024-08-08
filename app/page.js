@@ -3,9 +3,9 @@ import dynamic from "next/dynamic";
 import Link from "next/link"
 import SmsCall from "./components/SmsCall";
 import StyleSubway from '../public/subway-tiles.jpg';
-import StyleMosaic from '../public/mosaic-tiles.jpg';
-import StyleLrgFormat from '../public/large-format-tiles.jpg';
-import StyleZellige from '../public/zellige-tiles.jpg';
+import StyleMosaic from '../public/mosaic-tiles2.jpg';
+import StyleLrgFormat from '../public/large-format-tiles2.jpg';
+import StyleZellige from '../public/zellige-tiles2.png';
 const ScrollFromRight = dynamic(() =>import('./components/ScrollFromRight'), {ssr: false});
 const ScrollFromLeft = dynamic(() =>import('./components/ScrollFromLeft'), {ssr: false});
 
@@ -52,7 +52,7 @@ export default function Home() {
                 Experienced Tile Installation Services Near Logan, Utah 
                 </h1>
                 <p className="max-w-[600px] text-white md:text-xl">
-                Do you Need tile work done in Logan, Utah? Our friendly team offers expert tile installation, serving Logan and nearby communities. From floors to backsplashes,
+                 expert tile installation, serving Logan and nearby communities. 
                  we provide quality craftsmanship with a personal touch. Contact us to start your project!
                 </p>
               </div>
@@ -133,9 +133,10 @@ export default function Home() {
       </section>
 
 
-      <section id="tiles" className="bg-muted py-16 px-6 bg-[#f5f5f5]">
+      <section id="tiles" className="bg-muted py-2 px-6 bg-[#f5f5f5]">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl font-bold mb-8">Our Tile Options</h2>
+         {/* <h2 className="text-2xl font-bold mb-8">Our Tile Options</h2>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             <ScrollFromRight>
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -171,6 +172,7 @@ export default function Home() {
             </div>
             </ScrollFromRight>
           </div>
+          */}
         </div>
       </section>
 
@@ -182,7 +184,7 @@ export default function Home() {
                 Explore Our Tile Styles
               </h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Tile styles to fit your luxury flooring project.
+                Tile styles to fit your luxury tile project.
               </p>
             </div>
           </div>
@@ -403,9 +405,9 @@ export default function Home() {
               <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
                 <DiscIcon className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-[#2f4b65]">Expert Craftsmanship</h3>
+              <h3 className="text-lg font-bold text-[#2f4b65]">Lasting Craftsmanship</h3>
               <p className="text-muted-foreground">
-                Our flooring jobs are crafted to withstand heavy foot traffic, moisture, and other environmental factors, ensuring
+                Our tile jobs are installed correctly to industry standards withstand heavy foot traffic, moisture, and other environmental factors, ensuring
                 long-lasting performance and stunning beauty.
               </p>
             </div>
@@ -413,7 +415,7 @@ export default function Home() {
               <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
                 <HomeIcon className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-[#2f4b65]">Easy Maintenance</h3>
+              <h3 className="text-lg font-bold text-[#2f4b65]">Installed With High Attention to Detail</h3>
               <p className="text-muted-foreground">
                 Enjoy the convenience of tiles that are simple to clean and maintain, keeping your space looking its
                 best with minimal effort.
@@ -423,7 +425,7 @@ export default function Home() {
               <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
                 <TableIcon className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-[#2f4b65]">Stylish Luxury Materials</h3>
+              <h3 className="text-lg font-bold text-[#2f4b65]">Top Of The Line Installation Materials</h3>
               <p className="text-muted-foreground">
               Our tiles come in a wide range of designs to complement any decor.Choose from a wide selection of high-quality porcelain, ceramic, marble, and granite tiles.
               </p>
