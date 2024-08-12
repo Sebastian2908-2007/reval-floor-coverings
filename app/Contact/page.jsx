@@ -32,8 +32,8 @@ export default function Contact() {
               <div className="flex items-start space-x-2">
                 <LocateIcon className="w-6 h-6 mt-1" />
                 <span>
-                381 E 400 N,<br />
-                Logan, UT 84321
+                Logan,<br />
+                 UT 84321
                 </span>
               </div>
             </div>

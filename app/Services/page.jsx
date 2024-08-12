@@ -40,11 +40,11 @@ export default function Component() {
           </div>
         </div>
       </section>
-      <section className="py-12 px-4 md:px-6 lg:px-8">
+      <section className="py-12 px-4 md:px-6 lg:px-8 bg-[#FFFFFF]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white text-[#2f4b65] rounded-lg shadow-lg overflow-hidden">
            <Image
-              src="/placeholder.svg"
+              src="/service-bath-remodel.JPEG"
               alt="Bathroom Remodel"
               width={500}
               height={300}
@@ -67,7 +67,7 @@ export default function Component() {
           </div>
           <div className="bg-white text-[#2f4b65] rounded-lg shadow-lg overflow-hidden">
            <Image
-              src="/placeholder.svg"
+              src="/service-tile-shower.JPEG"
               alt="Tiled Shower"
               width={500}
               height={300}
@@ -90,7 +90,7 @@ export default function Component() {
           </div>
           <div className="bg-white text-[#2f4b65] rounded-lg shadow-lg overflow-hidden">
            <Image
-              src="/placeholder.svg"
+              src="/service-backsplash.jpg"
               alt="Tile Backsplash"
               width={500}
               height={300}
@@ -113,7 +113,7 @@ export default function Component() {
           </div>
           <div className="bg-white text-[#2f4b65] rounded-lg shadow-lg overflow-hidden">
            <Image
-              src="/placeholder.svg"
+              src="/service-tile-floor.JPEG"
               alt="Tile Flooring"
               width={500}
               height={300}
@@ -136,7 +136,7 @@ export default function Component() {
           </div>
           <div className="bg-white text-[#2f4b65] rounded-lg shadow-lg overflow-hidden">
            <Image
-              src="/placeholder.svg"
+              src="/fire-surround-1.JPEG"
               alt="Fireplace Surround"
               width={500}
               height={300}
