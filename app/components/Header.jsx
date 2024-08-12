@@ -15,18 +15,10 @@ const Header = () => {
         />
     </Link>
     <nav className=" flex flex-wrap justify-center bg-[#2f4b65] w-[100%] pt-2 gap-4 sm:gap-6 ">
-    <Link href="#" className="text-sm font-medium text-white hover:underline underline-offset-4" prefetch={false}>
-       Bathroom Remodels
+    <Link href="/Services" className="text-sm font-medium text-white hover:underline underline-offset-4" prefetch={false}>
+       Services
       </Link>
-      <Link href="#" className="text-sm font-medium text-white hover:underline underline-offset-4" prefetch={false}>
-       Backsplashes
-      </Link>
-      <Link href="#" className="text-sm font-medium text-white hover:underline underline-offset-4" prefetch={false}>
-      Floor Tile
-      </Link>
-      <Link href="#" className="text-sm font-medium text-white hover:underline underline-offset-4" prefetch={false}>
-      Fireplace Surrounds
-      </Link>
+    
       <Link href="#" className="text-sm font-medium text-white hover:underline underline-offset-4" prefetch={false}>
       Gallery 
       </Link>
