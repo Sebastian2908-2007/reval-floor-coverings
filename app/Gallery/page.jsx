@@ -13,6 +13,9 @@ import { Button } from "@/components/ui/button";
 import GalleryImg from "../components/GalleryImg";
 import { photos } from "@/utils/photos";
 
+
+
+
 export default function Gallery() {
   const [category,setCategory] = useState('All');  
     function sortPhotos (photo) {

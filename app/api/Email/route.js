@@ -9,7 +9,7 @@ export async function POST(request) {
   try {
      await resend.emails.send({
       from:`sebastian@topdev.tech`, 
-      //from: 'sebastian@topdev.tech',
+      //from: 'revalfloorcoverings@gmail.com',
       to:'revalfloorcoverings@gmail.com',
       subject: `Hot lead from ${name}`,
       react: LeadEmail({ email, name,phone,description,subject}),

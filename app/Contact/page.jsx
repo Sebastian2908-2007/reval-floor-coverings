@@ -1,39 +1,36 @@
-'use client'
-import { useState } from "react";
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Button } from "@/components/ui/button"
+import ContactForm from "../components/ContactForm";
+
+export const metadata = {
+  title: "Contact Us | Bathroom Remodeling & Tile Services Near Logan, Utah",
+  description: "Get in touch with us for expert bathroom remodeling and tile services near Logan, Utah. Whether you need a custom tiled shower, a beautiful backsplash, tile flooring, or a fireplace surround, our team is ready to help. Contact us today to start your project.",
+  keywords: [
+    'contact bathroom remodelers Logan Utah',
+    'contact tile installers Logan Utah',
+    'bathroom remodeling contact Logan Utah',
+    'tile services contact Logan Utah',
+    'tile contractors Logan Utah',
+    'bathroom renovation inquiry Logan Utah',
+    'get a quote Logan Utah',
+    'contact us Logan Utah',
+    'tile work consultation Logan Utah',
+    'bathroom remodel quote Logan Utah',
+  ],
+  metadataBase: new URL('https://reval-floor-coverings.vercel.app/'),
+  alternates: {
+    canonical: '/contact',
+    languages: {
+      'en-US': '/en-US',
+      'es-ES': '/es-ES',
+    },
+  },
+  openGraph: {
+    images: '/og-contact-image.png',
+  },
+};
+
 
 export default function Contact() {
-   // form state
-   const [formData,setFormData] = useState({name:'',email:'',phone:'',description:'',subject:''});
-   // function to handle form field changes
-   const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData({
-        ...formData,
-        [name]: value,
-    });
-};
 
-const handleSubmit = async (event) => {
-    event.preventDefault();
-    const {name,email,phone,description,subject} = formData;
-   
-    try{
-  const response = await fetch('/api/Email',{
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email:email, name:name, phone:phone, description:description, subject:subject }),
-    });
-    if(response.ok) {
-       window.location.reload();
-    }
-}catch(e) {
-    console.log(e);
-}
-   
-};
 
   return (
     <div className="bg-[#2f4b65] text-white py-12 md:py-20 lg:py-24">
@@ -67,45 +64,7 @@ const handleSubmit = async (event) => {
           </div>
           <div className="bg-white text-[#2f4b65] rounded-lg shadow-lg p-6 col-span-1 md:col-span-2 lg:col-span-2 space-y-4">
             <h2 className="text-2xl font-bold">Contact Us</h2>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="name" className="block mb-1 text-sm font-medium">
-                    Name
-                  </label>
-                  <Input onChange={handleChange} id="name" type="text" name="name"  placeholder="John Doe" />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block mb-1 text-sm font-medium">
-                    Email
-                  </label>
-                  <Input onChange={handleChange} id="email" type="email" placeholder="john@example.com" name="email" />
-                </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="phone" className="block mb-1 text-sm font-medium">
-                    Phone
-                  </label>
-                  <Input onChange={handleChange} id="phone" type="tel" placeholder="(123) 456-7890"   name="phone"  />
-                </div>
-                <div>
-                  <label htmlFor="subject" className="block mb-1 text-sm font-medium">
-                    Subject
-                  </label>
-                  <Input onChange={handleChange} id="subject" type="text" placeholder="Inquiry about tiles" name="subject"/>
-                </div>
-              </div>
-              <div>
-                <label htmlFor="description" className="block mb-1 text-sm font-medium">
-                  Message
-                </label>
-                <Textarea onChange={handleChange} id="message" rows={4} placeholder="How can we help you?" name="description" />
-              </div>
-              <Button type="submit" className="bg-[#2f4b65] text-white hover:bg-[#1e3549] transition-colors">
-                Submit
-              </Button>
-            </form>
+           <ContactForm/>
           </div>
         </div>
       </div>
