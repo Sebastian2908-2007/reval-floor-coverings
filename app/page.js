@@ -9,7 +9,7 @@ import StyleZellige from '../public/zellige-tiles2.png';
 const ScrollFromRight = dynamic(() =>import('./components/ScrollFromRight'), {ssr: false});
 const ScrollFromLeft = dynamic(() =>import('./components/ScrollFromLeft'), {ssr: false});
 
-const StaticScrollOpacity = dynamic(() =>import( "./components/StaticScrollOpacity"), {ssr: false});;
+const StaticScrollOpacity = dynamic(() =>import( "./components/StaticScrollOpacity"), {ssr: false});
 
 export const metadata = {
   title: "Jakeo Tile || Tile Installation in Logan Utah | Professional Tile Services",

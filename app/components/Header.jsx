@@ -14,7 +14,7 @@ const Header = () => {
           priority
         />
     </Link>
-    <nav className=" flex flex-wrap justify-center bg-[#2f4b65] w-[100%] pt-2 gap-4 sm:gap-6 ">
+    <nav className=" flex flex-wrap justify-center p-2 bg-[#2f4b65] w-[100%] pt-2 gap-4 sm:gap-6 ">
     <Link href="/Services" className="text-sm font-medium text-white hover:underline underline-offset-4" prefetch={false}>
        Services
       </Link>

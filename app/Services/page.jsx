@@ -1,6 +1,37 @@
-
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
+const ScrollFromRight = dynamic(() =>import('../components/ScrollFromRight'), {ssr: false});
+const ScrollFromLeft = dynamic(() =>import('../components/ScrollFromLeft'), {ssr: false});
+const StaticScrollOpacity = dynamic(() =>import( "../components/StaticScrollOpacity"), {ssr: false});
+export const metadata = {
+  title: "Bathroom Remodeling Near Logan, Utah | Expert Tiled Showers, Backsplashes, Flooring, & Fireplace Surrounds",
+  description: "Transform your bathroom with our expert remodeling services near Logan, Utah. Specializing in custom tiled showers, elegant backsplashes, tile flooring, and stunning fireplace surrounds, we bring your vision to life. Get a quote today and elevate your space with our professional craftsmanship.",
+  keywords: [
+    'bathroom remodeling Logan Utah',
+    'tiled showers Logan Utah',
+    'tile backsplashes Logan Utah',
+    'tile flooring Logan Utah',
+    'fireplace surrounds Logan Utah',
+    'bathroom renovation Logan Utah',
+    'custom tile work Logan Utah',
+    'tile installation Logan Utah',
+    'bathroom remodel Logan Utah',
+    'tile services Logan Utah',
+  ],
+  metadataBase: new URL('https://reval-floor-coverings.vercel.app/'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-US',
+      'es-ES': '/es-ES',
+    },
+  },
+  openGraph: {
+    images: '/og-image.png',
+  },
+};
+
 
 export default function Services() {
   return (
@@ -42,6 +73,7 @@ export default function Services() {
       </section>
       <section className="py-12 px-4 md:px-6 lg:px-8 bg-[#FFFFFF]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <ScrollFromLeft>
           <div className="bg-white text-[#2f4b65] rounded-lg shadow-lg overflow-hidden">
            <Image
               src="/service-bath-remodel.JPEG"
@@ -65,6 +97,8 @@ export default function Services() {
               </Link>
             </div>
           </div>
+          </ScrollFromLeft>
+          <StaticScrollOpacity>
           <div className="bg-white text-[#2f4b65] rounded-lg shadow-lg overflow-hidden">
            <Image
               src="/service-tile-shower.JPEG"
@@ -88,6 +122,8 @@ export default function Services() {
               </Link>
             </div>
           </div>
+          </StaticScrollOpacity>
+          <ScrollFromRight>
           <div className="bg-white text-[#2f4b65] rounded-lg shadow-lg overflow-hidden">
            <Image
               src="/service-backsplash.jpg"
@@ -111,6 +147,8 @@ export default function Services() {
               </Link>
             </div>
           </div>
+       </ScrollFromRight>
+       <ScrollFromRight>
           <div className="bg-white text-[#2f4b65] rounded-lg shadow-lg overflow-hidden">
            <Image
               src="/service-tile-floor.JPEG"
@@ -134,6 +172,8 @@ export default function Services() {
               </Link>
             </div>
           </div>
+          </ScrollFromRight>
+          <ScrollFromLeft>
           <div className="bg-white text-[#2f4b65] rounded-lg shadow-lg overflow-hidden">
            <Image
               src="/fire-surround-1.JPEG"
@@ -157,6 +197,7 @@ export default function Services() {
               </Link>
             </div>
           </div>
+          </ScrollFromLeft>
         </div>
       </section>
     </div>

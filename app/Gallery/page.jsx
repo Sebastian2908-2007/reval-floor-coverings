@@ -24,8 +24,8 @@ export default function Gallery() {
     <div className="container mx-auto px-4 md:px-6 py-12 md:py-16">
       <div className="grid gap-6 md:gap-8">
         <div className="text-center">
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Explore Our Projects</h1>
-          <p className="mt-2 text-muted-foreground">
+          <h1 className="text-3xl p-4 md:text-4xl font-bold rounded-sm tracking-tight bg-[#2f4b65]  text-white">Jakeo Tile Projects</h1>
+          <p className="mt-2 text-white bg-[#000000] p-2 rounded-md">
             Discover some of our favorite projects.
           </p>
         </div>

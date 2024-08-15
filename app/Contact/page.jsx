@@ -54,7 +54,7 @@ const handleSubmit = async (event) => {
               </div>
               <div className="flex items-center space-x-2">
                 <MailIcon className="w-6 h-6" />
-                <a href="mailto:revalfloorcoverings@gmail.com">revalfloorcoverings@gmail.com</a>
+                <a className="underline" href="mailto:revalfloorcoverings@gmail.com">Email Jakeo Tile</a>
               </div>
               <div className="flex items-start space-x-2">
                 <LocateIcon className="w-6 h-6 mt-1" />
