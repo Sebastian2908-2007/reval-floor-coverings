@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Component() {
+export default function Services() {
   return (
     <div className="bg-[#2f4b65] text-white">
      <section className="w-full py-8 md:py-14 lg:py-32 bg-[#2f4b65]">
@@ -57,7 +57,7 @@ export default function Component() {
                 Transform your bathroom into a luxurious oasis with our expert remodeling services.
               </p>
               <Link
-                href="#"
+                href="tel:435-994-4143"
                 className="inline-flex items-center justify-center rounded-md bg-[#2f4b65] px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-[#1e3549] focus:outline-none focus:ring-2 focus:ring-[#2f4b65] focus:ring-offset-2"
                 prefetch={false}
               >
@@ -80,7 +80,7 @@ export default function Component() {
                 Elevate your bathroom with a custom tiled shower that adds style and functionality.
               </p>
               <Link
-                href="#"
+                href="tel:435-994-4143"
                 className="inline-flex items-center justify-center rounded-md bg-[#2f4b65] px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-[#1e3549] focus:outline-none focus:ring-2 focus:ring-[#2f4b65] focus:ring-offset-2"
                 prefetch={false}
               >
@@ -103,7 +103,7 @@ export default function Component() {
                 Add a touch of elegance to your kitchen with a custom tile backsplash.
               </p>
               <Link
-                href="#"
+                href="tel:435-994-4143"
                 className="inline-flex items-center justify-center rounded-md bg-[#2f4b65] px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-[#1e3549] focus:outline-none focus:ring-2 focus:ring-[#2f4b65] focus:ring-offset-2"
                 prefetch={false}
               >
@@ -126,7 +126,7 @@ export default function Component() {
                 Transform any room with our high-quality tile flooring solutions.
               </p>
               <Link
-                href="#"
+                href="tel:435-994-4143"
                 className="inline-flex items-center justify-center rounded-md bg-[#2f4b65] px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-[#1e3549] focus:outline-none focus:ring-2 focus:ring-[#2f4b65] focus:ring-offset-2"
                 prefetch={false}
               >
@@ -149,7 +149,7 @@ export default function Component() {
                 Enhance the focal point of your living space with a custom fireplace surround.
               </p>
               <Link
-                href="#"
+                href="tel:435-994-4143"
                 className="inline-flex items-center justify-center rounded-md bg-[#2f4b65] px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-[#1e3549] focus:outline-none focus:ring-2 focus:ring-[#2f4b65] focus:ring-offset-2"
                 prefetch={false}
               >

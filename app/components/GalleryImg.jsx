@@ -1,16 +1,28 @@
-import Link from "next/link";
+'use client'
+import { useState } from "react";
+import Modal from "./Modal";
 import Image from "next/image";
 const GalleryImg = ({photo}) => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const openModal = () => {
+      console.log('click');
+        setIsModalOpen(true);
+      };
+    
+      const closeModal = () => {
+        setIsModalOpen(false);
+      };
     const {
         path,
         alt,
         description
     } = photo;
     return(
+        <>
         <div className="relative group overflow-hidden rounded-lg">
-        <Link href="#" className="absolute inset-0 z-10" prefetch={false}>
+        <button onClick={() => openModal()} className="absolute inset-0 z-10" >
           <span className="sr-only">View photo</span>
-        </Link>
+        </button>
         <Image
           src={path}
           alt={alt}
@@ -24,6 +36,31 @@ const GalleryImg = ({photo}) => {
           <ZoomInIcon className="w-8 h-8 text-white" />
         </div>
       </div>
+
+
+
+      <Modal isOpen={isModalOpen} onClose={closeModal}>
+        <div className="
+        mb-2
+        relative flex 
+        ">
+       
+       <Image
+            className="object-contain"
+            src={path}
+            alt={alt}
+            width={800} // Adjust the width as needed
+            height={600} // Adjust the height as needed
+          />  
+    </div>
+    <button
+          className="bg-red-500 text-white px-4 py-2 rounded"
+          onClick={closeModal}
+        >
+          Close
+        </button>
+        </Modal>
+      </>
     );
 };
 

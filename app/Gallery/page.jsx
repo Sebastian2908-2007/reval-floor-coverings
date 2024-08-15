@@ -12,24 +12,21 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import GalleryImg from "../components/GalleryImg";
 import { photos } from "@/utils/photos";
-export default function Component() {
-  const [category,setCategory] = useState('All');
-  //useEffect(() => {},[category]);
-  
-    
+
+export default function Gallery() {
+  const [category,setCategory] = useState('All');  
     function sortPhotos (photo) {
       return category === photo.description;
     }; 
     const sortedPhotos = photos.filter(sortPhotos);
- console.log('F',sortedPhotos);
-  //console.log( photos.filter((photo) => photo.description === 'Backsplashes'));
+ 
   return (
     <div className="container mx-auto px-4 md:px-6 py-12 md:py-16">
       <div className="grid gap-6 md:gap-8">
         <div className="text-center">
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Explore Our Photo Gallery</h1>
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Explore Our Projects</h1>
           <p className="mt-2 text-muted-foreground">
-            Discover a curated collection of stunning photos across various categories.
+            Discover some of our favorite projects.
           </p>
         </div>
         <div className="flex items-center justify-end gap-4">
@@ -86,24 +83,3 @@ function FilterIcon(props) {
 }
 
 
-function ZoomInIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <circle cx="11" cy="11" r="8" />
-      <line x1="21" x2="16.65" y1="21" y2="16.65" />
-      <line x1="11" x2="11" y1="8" y2="14" />
-      <line x1="8" x2="14" y1="11" y2="11" />
-    </svg>
-  )
-}

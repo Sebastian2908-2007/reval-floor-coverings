@@ -22,7 +22,7 @@ return (
        Services
       </Link>
     
-      <Link href="#" className="text-sm font-medium text-white hover:underline underline-offset-4" prefetch={false}>
+      <Link href="/Gallery" className="text-sm font-medium text-white hover:underline underline-offset-4" prefetch={false}>
       Gallery 
       </Link>
       <Link href="/Contact" className="text-sm font-medium text-white hover:underline underline-offset-4" prefetch={true}>
