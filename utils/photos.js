@@ -207,3 +207,21 @@ export const photos = [
     },
     
 ];
+
+export const beforeAfterPhotos = [
+    {
+        key:21,
+        path1:'/gallery (34).JPEG',
+        path2:'/gallery (36).JPEG',
+    },
+    {
+        key:22,
+        path1:'/gallery (40).JPEG',
+        path2:'/gallery (39).JPEG',
+    },
+    {
+        key:23,
+        path1:'/gallery (16).JPEG',
+        path2:'/service-tile-floor.JPEG',
+    },
+];

@@ -11,7 +11,8 @@ import {
 import { useState, useEffect } from "react";    
 import { Button } from "@/components/ui/button";
 import GalleryImg from "../components/GalleryImg";
-import { photos } from "@/utils/photos";
+import { photos, beforeAfterPhotos } from "@/utils/photos";
+import BeforeAfterImg from "../components/beforeAfterImg";
 
 
 export default function Gallery() {
@@ -60,6 +61,16 @@ export default function Gallery() {
     ))}
         </div>
       </div>
+    <div className="mt-6">
+      <div className="lg:flex lg:justify-center">
+      <h2 className="text-right mb-2 text-3xl p-4 md:text-4xl font-bold rounded-sm tracking-tight bg-[#2f4b65] text-white min-[768px]:text-center lg:w-[90%] xl:w-[70%] lg:mb-6">Before Jakeo Tile and After Jakeo Tile</h2>
+      </div>
+      {
+      beforeAfterPhotos.map(imgs => ( 
+      <BeforeAfterImg key={imgs.key} imgPaths={imgs}/>
+    ))
+       }
+       </div>
     </div>
   )
 }
