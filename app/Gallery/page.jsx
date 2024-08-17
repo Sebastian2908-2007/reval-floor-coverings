@@ -12,7 +12,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import GalleryImg from "../components/GalleryImg";
 import { photos, beforeAfterPhotos } from "@/utils/photos";
-import BeforeAfterImg from "../components/beforeAfterImg";
+import BeforeAfterImg from "../components/BeforeAfterImg";
 
 
 export default function Gallery() {
