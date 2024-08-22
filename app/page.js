@@ -87,11 +87,11 @@ export default function Home() {
             <StaticScrollOpacity>
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter text-[#2f4b65] sm:text-5xl">
-                Key Features of Jakeo Tile
+              Why Choose Tile with Jakeo Tile?
               </h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              At Jakeo Tile, we specialize in creating stunning kitchen backsplashes, installing high-quality floor tiles,designing elegant fireplace surrounds, not to mention full bathroom remodels! 
-              Our expert team will work with you to bring your vision to life, transforming your space into a work of art.
+              When you choose tile, you’re investing in a material that combines beauty, functionality, and longevity. At Jakeo Tile, we specialize in helping you 
+              make the most of these benefits, transforming your spaces with expertly installed tile that’s built to last.
               </p>
             </div>
             </StaticScrollOpacity>
@@ -104,7 +104,7 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-bold text-[#2f4b65]">Wide Variety of Styles</h3>
               <p className="text-muted-foreground">
-              At Jakeo Tile, we provide top-quality porcelain, ceramic, and natural stone tiles to match any style, from sleek and modern to classic and timeless.
+              At Jakeo Tile, we will install top-quality porcelain, ceramic, and natural stone tiles to match any style, from sleek and modern to classic and timeless.
               </p>
             </div>
             </StaticScrollOpacity>
@@ -115,7 +115,7 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-bold text-[#2f4b65]">Exceptional Durability</h3>
               <p className="text-muted-foreground">
-                Our tiles are built to last, with superior resistance to wear, tear, and weather conditions.
+                Our tiles are installed to last, with superior resistance to wear, tear, and weather conditions.
               </p>
             </div>
             </StaticScrollOpacity>
@@ -342,7 +342,7 @@ export default function Home() {
       </section>
       <section id="about" className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6 min-[912px]:px-28">
-          <div className="lg:grid lg:gap-6 lg:grid-cols-2 lg:gap-12">
+          <div className="flex flex-col items-center">
            {/*} <Image
               src="/owner-2.jpg"
               width="550"
@@ -351,7 +351,7 @@ export default function Home() {
               className="mx-auto overflow-hidden rounded-xl object-cover object-center sm:w-full"
             />*/}
             <VideoComponent/>
-            <div className="mt-4 flex flex-col justify-center space-y-4">
+            <div className="mt-4 flex flex-col justify-center space-y-4 lg:mt-12">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter text-[#2f4b65] sm:text-4xl md:text-5xl">
                   About Jakeo Tile
