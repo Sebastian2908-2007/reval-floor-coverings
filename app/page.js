@@ -5,7 +5,7 @@ import SmsCall from "./components/SmsCall";
 import StyleSubway from '../public/subway-tiles3.jpg';
 import StyleMosaic from '../public/mosiac-j.JPEG';
 import StyleLrgFormat from '../public/large-format-j.JPEG';
-import StyleZellige from '../public/zellige-J.JPEG';
+import StyleZellige from '../public/zellige-j.JPEG';
 const ScrollFromRight = dynamic(() =>import('./components/ScrollFromRight'), {ssr: false});
 const ScrollFromLeft = dynamic(() =>import('./components/ScrollFromLeft'), {ssr: false});
 const VideoComponent = dynamic(() => import('./components/VideoComponent'), {
