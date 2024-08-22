@@ -49,15 +49,11 @@ export default function Contact() {
                 <PhoneIcon className="w-6 h-6" />
                 <a href="tel:435-994-4143">435-994-4143</a>
               </div>
-              <div className="flex items-center space-x-2">
-                <MailIcon className="w-6 h-6" />
-                <a className="underline" href="mailto:revalfloorcoverings@gmail.com">Email Jakeo Tile</a>
-              </div>
+              
               <div className="flex items-start space-x-2">
                 <LocateIcon className="w-6 h-6 mt-1" />
                 <span>
-                Logan,<br />
-                 UT 84321
+                Logan, UT 84321
                 </span>
               </div>
             </div>

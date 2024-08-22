@@ -2,12 +2,15 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import Link from "next/link"
 import SmsCall from "./components/SmsCall";
-import StyleSubway from '../public/subway-tiles.jpg';
-import StyleMosaic from '../public/mosaic-tiles2.jpg';
-import StyleLrgFormat from '../public/large-format-tiles2.jpg';
-import StyleZellige from '../public/zellige-tiles2.png';
+import StyleSubway from '../public/subway-tiles3.jpg';
+import StyleMosaic from '../public/mosiac-j.JPEG';
+import StyleLrgFormat from '../public/large-format-j.JPEG';
+import StyleZellige from '../public/zellige-J.JPEG';
 const ScrollFromRight = dynamic(() =>import('./components/ScrollFromRight'), {ssr: false});
 const ScrollFromLeft = dynamic(() =>import('./components/ScrollFromLeft'), {ssr: false});
+const VideoComponent = dynamic(() => import('./components/VideoComponent'), {
+  ssr: false,
+});
 
 const StaticScrollOpacity = dynamic(() =>import( "./components/StaticScrollOpacity"), {ssr: false});
 
@@ -52,8 +55,8 @@ export default function Home() {
                 Experienced Tile Installation Services Near Logan, Utah 
                 </h1>
                 <p className="max-w-[600px] text-white md:text-xl">
-                 expert tile installation, serving Logan and nearby communities. 
-                 we provide quality craftsmanship with a personal touch. Contact us to start your project!
+                 Expert tile installation, serving Logan and nearby communities. 
+                 We provide quality craftsmanship with a personal touch. Contact us to start your project!
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -121,10 +124,9 @@ export default function Home() {
               <div className="flex items-center justify-center bg-[#2f4b65] rounded-full w-12 h-12">
                 <HomeIcon className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-[#2f4b65]">Easy Maintenance</h3>
+              <h3 className="text-lg font-bold text-[#2f4b65]">Eco Friendly Choice</h3>
               <p className="text-muted-foreground">
-                Enjoy the convenience of easy-to-clean tiles that require minimal upkeep to maintain their beautiful
-                appearance.
+              Choose from sustainable tiles made from natural materials, offering energy efficiency and long-lasting recyclability for a healthier planet.
               </p>
             </div>
             </StaticScrollOpacity>
@@ -198,7 +200,7 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-bold text-[#2f4b65]">Subway Tiles</h3>
               <p className="text-muted-foreground">
-              Classic and versatile, subway tiles offer a clean and modern look perfect for any space.
+              Classic and versatile, subway tiles offer a clean and traditional look perfect for any space.
               </p>
             </div>
             <div className="
@@ -341,38 +343,33 @@ export default function Home() {
       <section id="about" className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6 min-[912px]:px-28">
           <div className="lg:grid lg:gap-6 lg:grid-cols-2 lg:gap-12">
-            <Image
+           {/*} <Image
               src="/owner-2.jpg"
               width="550"
               height="310"
               alt="About"
               className="mx-auto overflow-hidden rounded-xl object-cover object-center sm:w-full"
-            />
+            />*/}
+            <VideoComponent/>
             <div className="mt-4 flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter text-[#2f4b65] sm:text-4xl md:text-5xl">
                   About Jakeo Tile
                 </h2>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                 
-                Jake Jones, the heart behind Reval Floor Coverings, always had a passion for all types of flooring.
-                 However, as he worked more with tiles, he found himself increasingly drawn to their versatility and beauty.
-                  
+                Jake’s journey in the construction industry began at just 16, when he took on an apprenticeship in flooring installation with a small company in Oregon. His passion for the craft grew, leading 
+                him to continue working in the field even after moving to Logan in 2015 to attend Utah State University.
                 </p>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                This newfound love led him to narrow his focus and rebrand his business as Jakeo Tile. 
-                  The new name captures the personal touch and dedication Jake brings to every project, highlighting his
-                   love for creating stunning tile installations. 
+                While juggling his studies, Jake honed his skills, earning a reputation for his meticulous attention to detail. This dedication to quality laid the foundation for Reval Floor Coverings,
+                 the company he launched a few years later to install hard surface flooring on his own.
                 </p>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Jakeo Tile is a reflection of Jake's journey and growth. Specializing in custom tile solutions,
-                 the company has become a trusted name in Logan, Utah. Jake takes pride in crafting unique and beautiful
-                 spaces, offering a warm and personalized experience for each client.
+                By 2023, Jake’s love for the craft inspired him to narrow his focus, leading to the creation of Jakeo Tile, where he could specialize in tile work. As a fully licensed general contractor,
+                 he finds great satisfaction in the building process and takes pride in each project.
                 </p>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                 The transition to Jakeo Tile was
-                   more than just a name change; it was a heartfelt shift towards a niche that Jake truly loves, allowing
-                    him to pour his creativity and care into every tile he installs..
+                Now firmly rooted in Cache Valley, Jake plans to continue making it his home, where he can build and contribute to the community for years to come.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">

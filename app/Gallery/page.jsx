@@ -33,10 +33,10 @@ export default function Gallery() {
         </div>
         <div className="flex items-center justify-end gap-4">
           <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="outline" className="flex items-center gap-2">
-                <FilterIcon className="h-4 w-4" />
-                <span>Filter by</span>
+            <DropdownMenuTrigger  asChild>
+              <Button variant="outline" className="flex items-center gap-2 bg-[#2f4b65] shadow-xl hover:bg-[#000000] ">
+                <FilterIcon className="h-4 w-4 text-white" />
+                <span className="text-white">Filter by</span>
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-48">
