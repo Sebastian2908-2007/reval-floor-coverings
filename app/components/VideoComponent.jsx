@@ -1,7 +1,7 @@
 'use client'
 import ReactPlayer from 'react-player';
-const video = '/jake-working-vid.mp4'; 
-export default function VideoComponent() {
+import video from '../../public/jake-working-vid.mp4' 
+const VideoComponent = () => {
     return (
       <div className="hero-vid-wrapper h-[100%] min-[2000px]:w-[100%]">
       <ReactPlayer
@@ -18,5 +18,7 @@ export default function VideoComponent() {
       />
       </div>
     );
-  }
+  };
+
+  export default VideoComponent;
   
