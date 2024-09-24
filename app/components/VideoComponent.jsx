@@ -1,6 +1,6 @@
 'use client'
 import ReactPlayer from 'react-player';
-import video from '../../public/jake-working-vid.mp4' 
+import video from '../../public/jake-working-vid.MP4'; 
 const VideoComponent = () => {
     return (
       <div className="hero-vid-wrapper h-[100%] min-[2000px]:w-[100%]">
