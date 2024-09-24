@@ -11,6 +11,7 @@ export async function POST(request) {
       from:`sebastian@topdev.tech`, 
       //from: 'revalfloorcoverings@gmail.com',
       to:'revalfloorcoverings@gmail.com',
+      //to:'sebastian@topdev.tech',
       subject: `Hot lead from ${name}`,
       react: LeadEmail({ email, name,phone,description,subject}),
     });
