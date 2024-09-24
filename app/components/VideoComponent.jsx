@@ -1,11 +1,21 @@
-// Inside your component
+'use client'
+import ReactPlayer from 'react-player';
+import video from '../../public/Jake-working-vid.mp4';
 export default function VideoComponent() {
     return (
-      <div>
-        <video controls width="600" height='600'>
-          <source  src="/Jake-working-vid.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      <div className="hero-vid-wrapper h-[100%] min-[2000px]:w-[100%]">
+      <ReactPlayer
+      className="reactPlayer"
+      controls={true}
+      url={video}
+      playing={false}
+      loop={false}
+      volume={0}
+      muted={true}
+      playsinline={true}
+      height='100%'
+      width={'100%'}
+      />
       </div>
     );
   }
